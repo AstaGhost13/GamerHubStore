@@ -33,7 +33,7 @@ export class InventarioComponent {
   }
 
   goBack(): void {
-    this.router.navigate(['/dashboard']);  // Navega a la ruta deseada, por ejemplo, '/admin'
+    this.router.navigate(['/dashboard']);  // Naveg a la ruta deseada, por ejemplo, '/admin'
   }
 
 
