@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class VentasService {
 
-  private sales: Ventas = new Ventas(26, 43, 'Monitor Vegax Super Pro3', 'josejose');
+  private sales: Ventas = new Ventas(30, 50, 'Monitor Gamer 1080', 'superSalvador');
   private salesSubject: BehaviorSubject<Ventas> = new BehaviorSubject(this.sales);
 
   getSales(): Observable<Ventas> {

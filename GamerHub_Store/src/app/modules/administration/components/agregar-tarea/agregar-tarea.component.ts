@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
-import { Tarea } from '../../models/tarea';
-import { AggTareaService } from '../../services/agg-tarea.service';
+import { Tarea } from '../models/tarea';
+import { AggTareaService } from '../services/agg-tarea.service';
 
 @Component({
   selector: 'app-agregar-tarea',

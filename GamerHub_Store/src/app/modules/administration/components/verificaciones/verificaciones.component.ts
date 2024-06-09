@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { VerificacionService } from '../../services/verificacion.service';
-import { verificacionClase } from '../../models/verificacionClase';
+import { VerificacionService } from '../services/verificacion.service';
+import { verificacionClase } from '../models/verificacionClase';
 
 @Component({
   selector: 'app-verificaciones',

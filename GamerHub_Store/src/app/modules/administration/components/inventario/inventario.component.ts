@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Inventario } from '../../models/inventario';
-import { InventarioService } from '../../services/inventario.service';
+import { Router, RouterLink } from '@angular/router';
+import { Inventario } from '../models/inventario';
+import { InventarioService } from '../services/inventario.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,7 +17,8 @@ export class InventarioComponent {
   inventory: Inventario[] = [];
   itemIdCounter: number = 1;
 
-  constructor(private inventoryService: InventarioService) { }
+  constructor(private inventoryService: InventarioService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.inventoryService.getInventory().subscribe(inventory => {
@@ -30,5 +31,10 @@ export class InventarioComponent {
     this.inventoryService.addItem(this.newItem);
     this.newItem = new Inventario(0, '', 0, 'Disponible');
   }
+
+  goBack(): void {
+    this.router.navigate(['/dashboard']);  // Navega a la ruta deseada, por ejemplo, '/admin'
+  }
+
 
 }

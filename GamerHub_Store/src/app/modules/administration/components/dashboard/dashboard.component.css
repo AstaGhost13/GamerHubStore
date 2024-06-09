@@ -1,3 +1,16 @@
+/* Contenedor principal que incluye el sidebar y el contenido */
+.containerTodo {
+    display: flex;
+  }
+
+  
+.content-container {
+    margin-left: 250px; /* Espacio dejado por el sidebar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Ajusta el ancho para ocupar el resto del espacio */
+}
+  
+
 .card-header {
     background-color: #7E8EF1; /* Color gris oscuro para el header */
     color: white;
@@ -13,3 +26,4 @@
     color: black;
     border-color: #343a40;
 }
+

@@ -10,10 +10,13 @@ import { VerificacionesComponent } from './modules/administration/components/ver
 import { VerificacionDetallesComponent } from './modules/administration/components/verificacion-detalles/verificacion-detalles.component'; 
 
 export const routes: Routes = [
+    
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'client', component: ClientComponent },
-    { path: '**', redirectTo: 'login', pathMatch: 'full' },
+
+
+
 
     
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },

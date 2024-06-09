@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import {  RouterLink } from '@angular/router';
-import { AggTareaService } from '../../services/agg-tarea.service';
-import { TareasService } from '../../services/tareas.service';
-import { Tarea } from '../../models/tarea';
-import { Ventas } from '../../models/ventas';
-import { VentasService } from '../../services/ventas.service';
+import { AggTareaService } from '../services/agg-tarea.service';
+import { TareasService } from '../services/tareas.service';
+import { Tarea } from '../models/tarea';
+import { Ventas } from '../models/ventas';
+import { VentasService } from '../services/ventas.service';
+import { SidebarComponent } from "../sidebar/sidebar.component";
 
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [RouterLink,],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+    selector: 'app-dashboard',
+    standalone: true,
+    templateUrl: './dashboard.component.html',
+    styleUrl: './dashboard.component.css',
+    imports: [RouterLink, SidebarComponent]
 })
 export class DashboardComponent implements OnInit {
   tasks: Tarea[] = [];

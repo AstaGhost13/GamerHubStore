@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { TareasService } from '../../services/tareas.service';
-import { Tarea } from '../../models/tarea';
+import { TareasService } from '../services/tareas.service';
+import { Tarea } from '../models/tarea';
 import { FormsModule } from '@angular/forms';
+import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
-  selector: 'app-tarea-pendiente',
-  standalone: true,
-  imports: [RouterLink,FormsModule],
-  templateUrl: './tarea-pendiente.component.html',
-  styleUrl: './tarea-pendiente.component.css'
+    selector: 'app-tarea-pendiente',
+    standalone: true,
+    templateUrl: './tarea-pendiente.component.html',
+    styleUrl: './tarea-pendiente.component.css',
+    imports: [RouterLink, FormsModule, SidebarComponent]
 })
 export class TareaPendienteComponent {
 
