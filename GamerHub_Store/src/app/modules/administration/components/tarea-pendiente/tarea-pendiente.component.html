@@ -1,0 +1,44 @@
+<div class="container mt-5">
+  <button class="btn btn-secondary mb-4" (click)="goBack()">Back</button> <!-- Botón de regreso -->
+
+    <h1>Tareas Pendientes</h1>
+    <form (ngSubmit)="addTask()">
+      <div class="form-group">
+        <label for="title">Título</label>
+        <input type="text" id="title" class="form-control" [(ngModel)]="newTask.title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <input type="text" id="description" class="form-control" [(ngModel)]="newTask.description" name="description" required>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Agregar Tarea</button>
+    </form>
+  
+    <h2 class="mt-5">Lista de Tareas Pendientes</h2>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        @for (task of tasks; track task) {
+        <tr >
+          <td>{{ task.id }}</td>
+          <td>{{ task.title }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.status }}</td>
+          <td>
+            <button If="task.status === 'Pendiente'" (click)="updateTaskStatus(task.id, 'Completada')" class="btn btn-success">Marcar como Completada</button>
+          </td>
+        </tr>
+    }
+      </tbody>
+    </table>
+  </div>
+  

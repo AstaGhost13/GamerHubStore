@@ -1,0 +1,10 @@
+.navbar-nav {
+    
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-right: 20px; /* Añade separación entre los elementos del navbar */
+  }

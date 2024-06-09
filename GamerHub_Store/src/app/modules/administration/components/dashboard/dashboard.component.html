@@ -1,0 +1,97 @@
+<h1>Bienvenido Admin:D</h1>
+
+<div class="container mt-5">
+    <!-- <h1 class="mb-4">Dashboard</h1>--->
+    <div class="col-md-9 mx-auto">
+        <div class="card mb-3">
+            <div class="card-header">
+                Ventas
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card text-center mb-3">
+                            <div class="card-header">
+                                Ventas Totales
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">{{ sales.totalSales }}/{{ sales.targetSales }}</h2>
+                                <p class="card-text">Meta: {{ sales.targetSales }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card text-center mb-3">
+                            <div class="card-header">
+                                Producto Más Vendido
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">{{ sales.topProduct }}</h3>
+                                <p class="card-text">Vendido por: {{ sales.topSeller }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mt-5">
+            <div class="card-header">
+                Gestionar Tareas
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card text-center mb-3">
+                            <div class="card-header">
+                                Verificaciones
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">hay pendientes </p>
+                                <a href="/verificaciones" class="btn btn-primary">Ver Verificaciones</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card text-center mb-3">
+                            <div class="card-header">
+                                Inventario
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">hay pendientes</p>
+                                <a href="/inventario" class="btn btn-primary">Ver Inventario</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card text-center mb-3">
+                            <div class="card-header">
+                                Tareas Pendientes
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">{{ pendingTasksCount }}/6</h2>
+                                <p class="card-text">agregar Tareas Pendientes..</p>
+                                <a href="/tarea-pendiente" class="btn btn-primary">Observar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card text-center mb-3">
+                            <div class="card-header">
+                                Agregar Tarea
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">{{ pendingTasksCount }}/6</h2>
+                                <p class="card-text">agregar tarea..</p>
+                                <a href="/agregar-tarea" class="btn btn-primary">Observar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

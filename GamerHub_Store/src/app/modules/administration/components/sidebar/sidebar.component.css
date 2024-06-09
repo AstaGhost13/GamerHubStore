@@ -1,0 +1,29 @@
+.sidebar {
+  margin-top: 132px;
+  height: 60vh;
+  width: 250px;
+  position: fixed;
+  top: 56px; /* Adjust according to the navbar height */
+  left: 0;
+  z-index: 100;
+  padding-top: 20px;
+  background-color: #343a40; /* Bootstrap dark background */
+}
+
+.sidebar .nav-link {
+  color: #ffffff; /* White text color */
+}
+
+.sidebar .nav-link.active {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #ffffff; /* Ensure text is white */
+}
+
+.sidebar .nav-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: #ffffff; /* Ensure text is white */
+}
+
+.text-white {
+  color: #ffffff !important; /* Ensure text is white */
+}

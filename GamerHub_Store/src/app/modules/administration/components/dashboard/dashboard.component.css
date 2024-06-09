@@ -1,0 +1,15 @@
+.card-header {
+    background-color: #7E8EF1; /* Color gris oscuro para el header */
+    color: white;
+}
+.card-body {
+    background-color: #f8f9fa; /* Color claro para el body */
+}
+.card-title {
+    color: #343a40; /* Color gris oscuro para el título */
+}
+.btn-primary {
+    background-color: #F0ECE5;
+    color: black;
+    border-color: #343a40;
+}

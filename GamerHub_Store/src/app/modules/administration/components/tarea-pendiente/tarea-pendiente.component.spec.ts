@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerificationComponent } from './verification.component';
+import { TareaPendienteComponent } from './tarea-pendiente.component';
 
-describe('VerificationComponent', () => {
-  let component: VerificationComponent;
-  let fixture: ComponentFixture<VerificationComponent>;
+describe('TareaPendienteComponent', () => {
+  let component: TareaPendienteComponent;
+  let fixture: ComponentFixture<TareaPendienteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VerificationComponent]
+      imports: [TareaPendienteComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(VerificationComponent);
+    fixture = TestBed.createComponent(TareaPendienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

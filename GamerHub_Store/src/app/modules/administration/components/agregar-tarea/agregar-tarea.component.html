@@ -1,0 +1,68 @@
+<div class="container mt-5">
+  <button class="btn btn-secondary mb-4" (click)="goBack()">Back</button> <!-- Botón de regreso -->
+
+    <div class="card">
+      <div class="card-header">
+        Agregar Tarea
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="addTask()">
+          <div class="form-group">
+            <label for="title">Título</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              [(ngModel)]="newTask.title"
+              name="title"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea
+              class="form-control"
+              id="description"
+              [(ngModel)]="newTask.description"
+              name="description"
+              rows="3"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">
+            Agregar Tarea
+          </button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="card mt-4">
+      <div class="card-header">
+        Lista de Tareas
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Descripción</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (task of tasks; track task) {
+            <tr >
+              <td>{{ task.id }}</td>
+              <td>{{ task.title }}</td>
+              <td>{{ task.description }}</td>
+              <td>{{ task.status }}</td>
+            </tr>
+
+        }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
